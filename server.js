@@ -19,8 +19,8 @@ app.use('/api', secretKeyAuthorization, api)
 const httpServer = http.createServer(app);
 const httpsServer = https.createServer(sslCredentials, app);
 
-const HTTP_PORT = process.env.PORT || 8085;
-const HTTPS_PORT = process.env.SSL_PORT || 8443;
+const HTTP_PORT = process.env.HTTP_PORT || 8080;
+const HTTPS_PORT = process.env.HTTPS_PORT || 8443;
 
 httpServer.listen(HTTP_PORT, () => {
     console.log("DIALOGFLOW ARTILLERY DELEGATE");
