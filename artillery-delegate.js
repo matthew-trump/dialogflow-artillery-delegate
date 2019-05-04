@@ -110,7 +110,7 @@ class ArtilleryDelegate {
         const filepath = dir + "/" + scriptId + ".yml";
         fs.writeFileSync(filepath, yaml)
     }
-    writeConversationIds = function (projectId, number) {
+    writeConversationIds(projectId, number) {
         const ids = [];
         for (let i = 0; i < number; i++) {
             ids.push(TEST_PREFIX + this.getRandomString());
@@ -178,7 +178,7 @@ class ArtilleryDelegate {
 
         })
     }
-    getYamlPath = function (projectId, scriptId) {
+    getYamlPath(projectId, scriptId) {
         const dir = SCRIPTS_PATH + projectId;
         const filepath = dir + "/" + scriptId + ".yml";
         return filepath;
